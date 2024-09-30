@@ -1,0 +1,69 @@
+.toggleButton{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 30px;
+  height: 21px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  /* background: red; */
+}
+
+.toggleButton div{
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  transition: 500ms ease-in-out;
+}
+
+/* .nav-active{
+  transform: rotateY(0deg);
+  transform-origin: right;
+} */
+
+
+/* @keyframes navLinkFade{
+  from{
+    opacity: 1;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+} */
+
+/* .toggleButton:hover .line1{
+    transform: rotate(-45deg) translate(-6px,6px);
+}
+
+.toggleButton:hover .line2{
+    opacity: 0;
+}
+
+.toggleButton:hover .line3{
+    transform: rotate(45deg) translate(-6px,-6px);
+} */
+
+
+/* .toggle .line1{
+  transform: rotate(-45deg) translate(-6px,6px);
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-6px,-6px);
+} */
+
+@media screen and (max-width: 700px){
+  .toggleButton{
+    display: flex;
+  }
+
+}
