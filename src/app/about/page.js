@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <div>
-            <img src='../public/food/food1.jpg' />
+            About page
         </div>
     );
 }
