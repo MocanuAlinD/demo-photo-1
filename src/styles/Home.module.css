@@ -10,7 +10,6 @@
   background-repeat: no-repeat;
   background-origin: content-box;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* tot meniul de sus, title si navbar */
@@ -21,8 +20,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  /* background: red; */
-  overflow: hidden;
 }
 
 .brandTitle{

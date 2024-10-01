@@ -1,69 +1,53 @@
-.toggleButton{
+.burgerContainer {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 30px;
-  height: 21px;
-  display: none;
+  top: 0.35rem;
+  right: 1rem;
+}
+
+.linesContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  /* background: red; */
-}
-
-.toggleButton div{
-  height: 3px;
   width: 100%;
-  background: white;
-  border-radius: 10px;
-  transition: 500ms ease-in-out;
+  height: 100%;
+}
+.burgerLine1,
+.burgerLine2,
+.burgerLine3 {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.35s ease-in-out;
+  transform-origin: center;
+}
+.burgerLine1,.burgerLine3{
+  transition-delay: .25s;
 }
 
-/* .nav-active{
-  transform: rotateY(0deg);
-  transform-origin: right;
-} */
-
-
-/* @keyframes navLinkFade{
-  from{
-    opacity: 1;
-    transform: translateX(50px);
-  }
-  to{
-    opacity: 1;
-    transform: translateX(0px);
-  }
-} */
-
-/* .toggleButton:hover .line1{
-    transform: rotate(-45deg) translate(-6px,6px);
+.linesContainer:hover .burgerLine1 {
+  transform: translateY(0.5rem) rotate(-45deg);
+  height: 5px;
+  border-radius: 5px;
 }
 
-.toggleButton:hover .line2{
-    opacity: 0;
-}
-
-.toggleButton:hover .line3{
-    transform: rotate(45deg) translate(-6px,-6px);
-} */
-
-
-/* .toggle .line1{
-  transform: rotate(-45deg) translate(-6px,6px);
-}
-
-.toggle .line2{
+.linesContainer:hover .burgerLine2 {
+  transform: translateX(100%);
   opacity: 0;
 }
 
-.toggle .line3{
-  transform: rotate(45deg) translate(-6px,-6px);
-} */
+.linesContainer:hover .burgerLine3 {
+  transform: translateY(-1rem) rotate(45deg);
+  height: 2px;
+}
 
-@media screen and (max-width: 700px){
-  .toggleButton{
-    display: flex;
+@media screen and (width > 700px){
+  .burgerContainer{
+    display: none;
   }
-
 }
