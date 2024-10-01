@@ -23,7 +23,6 @@
   align-items: flex-end;
   /* background: red; */
   overflow: hidden;
-  /* border: 1px solid red; */
 }
 
 .brandTitle{
@@ -77,8 +76,6 @@
   width: fit-content;
   margin-right: 11px;
   margin-top: -18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   background: #ffffff11;
