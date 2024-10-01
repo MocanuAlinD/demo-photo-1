@@ -25,7 +25,6 @@ const ListImages = ({ category }) => {
 
   const actualList = listaNume[category]
   
-  console.log("ListImages img is:",category);
   const [state, setState] = useState({
     data: actualList[0].url,
     width: actualList[0].width,
