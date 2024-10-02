@@ -1,8 +1,7 @@
 import React from "react";
 import NavbarPages from "./NavbarPages";
 
-const Layout = ({ children }) => {
-  const title = children.props.category;
+const Layout = ({ children, title }: {children: JSX.Element, title: string}) => {
   return (
     <>
       <NavbarPages title={title} />

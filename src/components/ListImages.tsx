@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import styles from "./NavbarPages.module.css";
+import styles from "./ListImages.module.css";
 import {
   portraits,
   kids,
@@ -12,8 +12,34 @@ import {
   landscape,
 } from "@/actions";
 
-const ListImages = ({ category }) => {
-  const listaNume = {
+// type tl = {
+// id: string;
+// url: string;
+// width: string;
+// height: string;
+// }[];
+
+// type AllLists = {
+//   portraits: tl;
+//   kids: tl;
+//   preborn: tl;
+//   newborn: tl;
+//   food: tl;
+//   city: tl;
+//   landscape: tl;
+// };
+
+type one = {
+  [index: string]: {
+    id: string;
+    url: string;
+    width: string;
+    height: string;
+  }[];
+};
+
+const ListImages = ({ category }: { category: string }) => {
+  const nameList: one = {
     portraits,
     kids,
     preborn,
@@ -23,36 +49,38 @@ const ListImages = ({ category }) => {
     landscape,
   };
 
-  const actualList = listaNume[category]
-  
+  const actualList = nameList[category];
+  console.log("nameList[category]", actualList);
+
   const [state, setState] = useState({
-    data: actualList[0].url,
+    url: actualList[0].url,
     width: actualList[0].width,
     height: actualList[0].height,
   });
-  const changeState = (a, b, c) => {
-    setState({ data: a, width: b, height: c });
+  const changeState = (a: string, b: string, c: string) => {
+    setState({ url: a, width: b, height: c });
   };
   return (
     <div className={styles.imagesContainer}>
       <div className={styles.inside}>
-        {actualList.map((a) => (
-          <div
-            onClick={() => changeState(a.url, a.width, a.height)}
-            key={a.id}
-            className={styles.separateImage}
-          >
-            <Image
-              priority
-              as="image"
-              className={styles.imageLink}
-              src={a.url}
-              width={a.width}
-              height={a.height}
-              alt="image"
-            />
-          </div>
-        ))}
+        {actualList.map(
+          (a: { id: string; url: string; width: string; height: string }) => (
+            <div
+              onClick={() => changeState(a.url, a.width, a.height)}
+              key={a.id}
+              className={styles.separateImage}
+            >
+              <Image
+                // priority
+                // as="image"
+                src={a.url}
+                width={+a.width}
+                height={+a.height}
+                alt="image"
+              />
+            </div>
+          )
+        )}
       </div>
       <div className={styles.bigImage}>
         <div
@@ -60,7 +88,7 @@ const ListImages = ({ category }) => {
           style={{
             width: "100%",
             height: "90vh",
-            backgroundImage: `url(${state.data})`,
+            backgroundImage: `url(${state.url})`,
             backgroundPosition: "center",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",

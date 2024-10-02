@@ -1,0 +1,34 @@
+.desktopMenuContainer {
+  display: none;
+}
+
+@media screen and (width > 700px) {
+  .desktopMenuContainer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    .desktopMenuList {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      & > li {
+        font-family: Poppins, sans-serif;
+        font-weight: 200;
+        transition: all 0.35s ease-in-out;
+      }
+      & > li:last-child {
+        margin-right: 2rem;
+      }
+
+      & li:hover{
+        color: whitesmoke;
+        letter-spacing: 2px;
+      }
+      &:has(li:hover) li:not(:hover) {
+        color: #ccc;
+        filter: blur(1px);
+      }
+    }
+  }
+}

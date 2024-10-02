@@ -18,16 +18,14 @@ const BurgerMenu = ({
 
   const closeBurgerMenu = () => closeBurger.closeBurger();
   return (
-    <div
-      className={styles.burgerMenuContainer}
-      // style={{ right: !curr ? "-300%" : "0%" } as React.CSSProperties}
-      // style={{ transform: curr ? "translateX(100%)" : "translateX(0%)" } as React.CSSProperties}
-
-    >
+    <div className={styles.burgerMenuContainer}>
       <ul
         className={styles.burgerListMenu}
-        // style={{ right: curr ? "-120%" : "10%" } as React.CSSProperties}
-        style={{ transform: curr ? "translateX(100%)" : "translateX(0%)" } as React.CSSProperties}
+        style={
+          {
+            transform: curr ? "translateX(100%)" : "translateX(0%)",
+          } as React.CSSProperties
+        }
       >
         <li>
           <Link onClick={closeBurgerMenu} href="/categorie/portraits">

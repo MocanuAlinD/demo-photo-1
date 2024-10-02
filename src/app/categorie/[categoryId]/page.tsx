@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 const Categorie = ({ params }: { params: { categoryId: string } }) => {
   const param = params.categoryId;
   return (
-    <Layout>
+    <Layout title={param}>
       <ListImages category={param} />
     </Layout>
   );
