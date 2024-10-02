@@ -22,19 +22,16 @@
   align-items: flex-end;
 }
 
-.brandTitle{
-  display: none;
-}
-
 /* title- Cristian Elena */
-.title h1{
-  color: whitesmoke;
-  font-size: 5rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+.titleElena{
+  font-size: 2rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 200;
+  text-transform: lowercase;
   padding: 0 10px;
-  margin-right: 13px;
-  margin-top: 41px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
 }
 
 .menuListInactive{
@@ -209,9 +206,9 @@
 /* ================================================================================== */
 
 @media (max-width: 700px){
-  .title{
+  /* .title{
     display: none;
-  }
+  } */
   
 
   .entireMenu{
@@ -222,24 +219,6 @@
     height: fit-content;
     display: flex;
     /* background: red; */
-  }
-
-  .brandTitle{
-    display: flex;
-    height: fit-content;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .brandTitle h4{
-    color: whitesmoke;
-    font-size: 2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    height: fit-content;
-    margin: auto 20px 0px;
-    letter-spacing: 0;
-    width: fit-content;
   }
 
   .menuListActive{

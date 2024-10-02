@@ -6,12 +6,9 @@ import Burger from "./Burger";
 const Navbar = () => {
   return (
     <div className={styles.entireMenu}>
-      <div className={styles.title}>
-        <h1>Cristian Elena</h1>
-      </div>
-      <div className={styles.brandTitle}>
-        <h4>cristian-elena.ro</h4>
-      </div>
+      {/* <div className={styles.title}> */}
+        <h1 className={styles.titleElena}>Cristian Elena</h1>
+      {/* </div> */}
       <Burger />
     </div>
   );

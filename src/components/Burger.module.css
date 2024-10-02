@@ -5,8 +5,9 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0.35rem;
+  top: 0;
   right: 1rem;
+  /* border: 1px solid red; */
 }
 
 .linesContainer {
@@ -16,11 +17,12 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .burgerLine1,
 .burgerLine2,
 .burgerLine3 {
-  width: 80%;
+  width: 60%;
   height: 2px;
   background-color: white;
   transition: all 0.35s ease-in-out;
