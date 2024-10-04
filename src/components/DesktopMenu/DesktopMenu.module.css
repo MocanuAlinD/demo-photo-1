@@ -14,16 +14,30 @@
       gap: 1rem;
       & > li {
         font-family: Poppins, sans-serif;
-        font-weight: 200;
+        font-weight: 400;
         transition: all 0.35s ease-in-out;
+        position: relative;
       }
       & > li:last-child {
         margin-right: 2rem;
       }
 
-      & li:hover{
+      & li:hover {
         color: whitesmoke;
         letter-spacing: 2px;
+      }
+      & li::before {
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: 0;
+        width: 0%;
+        height: 0.15rem;
+        background-color: #aaa;
+        transition: all 0.35s ease 0.2s;
+      }
+      & li:hover::before {
+        width: 100%;
       }
       &:has(li:hover) li:not(:hover) {
         color: #ccc;

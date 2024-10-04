@@ -1,4 +1,4 @@
-import Burger from "./Burger";
+import Burger from "../Burger";
 import styles from "./NavbarPages.module.css";
 
 // nav menu from specific categories. FIX to be only one.

@@ -1,0 +1,40 @@
+/* tot meniul de sus, title si navbar */
+.entireMenu {
+  height: 20rem;
+  height: fit-content;
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* title- Cristian Elena */
+.titleElena {
+  font-size: clamp(2rem, 4vw, 5rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  padding: 0 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 700px) {
+  .entireMenu {
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.2rem;
+  }
+  .titleElena {
+    justify-content: flex-start;
+    /* font-size: clamp(1rem, 4vw, 10rem); */
+    font-size: 2rem;
+    /* -webkit-box-reflect: below; */
+    -webkit-box-reflect: below -20px linear-gradient(transparent, #aaaaaa77);
+  }
+}
