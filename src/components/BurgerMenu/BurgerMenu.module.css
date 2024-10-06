@@ -1,6 +1,6 @@
 .burgerMenuContainer {
   position: absolute;
-  top: 110%;
+  top: 100%;
   right: 0rem;
   overflow-x: hidden;
   .burgerListMenu {

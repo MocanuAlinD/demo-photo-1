@@ -8,7 +8,9 @@ const NavbarPages = ({ title }: { title: string }) => {
     <div className={styles.entireNavbar}>
       {/* mobile title of current page */}
       <h3 className={styles.mobileTitlePage}>{title}</h3>
+      {/* DesktopMenu disabled for mobile */}
       <DesktopMenu />
+      {/* Burger disabled for large screens */}
       <Burger />
     </div>
   );

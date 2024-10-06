@@ -6,8 +6,7 @@ import styles from "./DesktopMenu.module.css";
 
 const DesktopMenu = () => {
   const path = usePathname();
-  const pg = path.split("/")[2]
-  console.log('pg',pg)
+  const pg = path.split("/")[path.split("/").length - 1];
 
   const paths = [
     "portraits",
@@ -38,7 +37,9 @@ const DesktopMenu = () => {
         })}
         {path != "/" && (
           <li>
-            <Link href="/" className={styles.homeLink}>home</Link>
+            <Link href="/" className={styles.homeLink}>
+              home
+            </Link>
           </li>
         )}
       </ul>

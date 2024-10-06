@@ -1,7 +1,6 @@
-import styles from "./Navbar.module.css"
 import Burger from "../Burger";
-// import DesktopMenu from "@/components/DesktopMenu";
 import DesktopMenu from "../DesktopMenu";
+import styles from "./Navbar.module.css"
 
 
 // navbar from index page

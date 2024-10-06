@@ -1,18 +1,20 @@
-.container{
-  height: 100vh;
-  width: 100vw;
+.container {
+  min-height: 100vh;
+  height: fit-content;
+  width: 100%;
+  margin-inline: auto;
   display: grid;
-  background-image: url('../../public/bg/bg12.jpg');
+  background-image: url("../../public/bg/bg12.jpg");
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-origin: content-box;
   box-sizing: border-box;
+  position: relative;
 }
 
-
-.menuListInactive{
+.menuListInactive {
   list-style: none;
   height: fit-content;
   width: fit-content;
@@ -27,14 +29,14 @@
   border-bottom: 1px solid #ffffff55;
 }
 
-.menuListInactive li a{
+.menuListInactive li a {
   color: whitesmoke;
   padding: 3px 10px;
   border: none;
   outline: none;
   cursor: pointer;
   transition: all 350ms ease-in-out;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   filter: blur(1px);
   letter-spacing: 2px;
@@ -42,7 +44,7 @@
 }
 
 /* ul */
-.menuListActive{
+.menuListActive {
   list-style: none;
   height: fit-content;
   width: fit-content;
@@ -56,27 +58,27 @@
   border-bottom: 1px solid #ffffff55;
 }
 
-.menuListActive li a{
+.menuListActive li a {
   color: whitesmoke;
   padding: 3px 9px;
   border: none;
   outline: none;
   cursor: pointer;
   transition: all 350ms ease-in-out;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   filter: blur(1px);
   letter-spacing: 2px;
   font-size: 1.3rem;
 }
 
-.menuListActive li{
+.menuListActive li {
   position: relative;
 }
 
 .menuListActive li a::before,
-.menuListInactive li a::before{
-  content: '';
+.menuListInactive li a::before {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -88,20 +90,18 @@
 }
 
 .menuListActive li a:hover::before,
-.menuListInactive li a:hover::before{
+.menuListInactive li a:hover::before {
   opacity: 1;
   background: whitesmoke;
   /* height: 3px; */
 }
 
-
 .menuListActive li a:hover,
-.menuListInactive li a:hover{
+.menuListInactive li a:hover {
   filter: blur(0px);
   opacity: 1;
   margin: 0 10px;
 }
-
 
 .bottom_div {
   background: #124559;
@@ -110,11 +110,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-around;
-      -ms-flex-pack: space-around;
-          justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: 2rem;
@@ -123,34 +123,32 @@
   left: 1%;
 }
 
-.shop{
-   color: whitesmoke;
-   width: fit-content;
-   font-size: 1.1rem;
-   height: 100%;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   font-family: 'Poppins';
- }
+.shop {
+  color: whitesmoke;
+  width: fit-content;
+  font-size: 1.1rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins";
+}
 
-.shop:first-child{
+.shop:first-child {
   padding-right: 1.7rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
+.shop .linkIcon {
+  color: #00b140;
+  width: 2rem;
+  height: 100%;
+  padding-right: 10px;
+}
 
-.shop .linkIcon{
-   color: #00b140;
-   width: 2rem;
-   height: 100%;
-   padding-right: 10px;
- }
-
-
-.toggleButton{
+.toggleButton {
   position: absolute;
   right: 1rem;
   display: none;
@@ -161,8 +159,7 @@
   cursor: pointer;
 }
 
-
-.toggleButton div{
+.toggleButton div {
   height: 3px;
   width: 100%;
   background: white;
@@ -170,27 +167,14 @@
   transition: 500ms ease-in-out;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* ================================================================================== */
 
-@media (max-width: 700px){
-
-
-  .menuListActive{
+@media (max-width: 700px) {
+  .menuListActive {
     display: none;
   }
 
-  .menuListInactive{
+  .menuListInactive {
     position: fixed;
     top: 4.1rem;
     right: -10px;
@@ -208,45 +192,13 @@
     border-radius: 50px 0 0 50px;
     transition: all 350ms ease-in-out;
   }
-  .menuListInactive li a{
+  .menuListInactive li a {
     filter: blur(0);
   }
 
- 
-  .menuListInactive li a:hover{
+  .menuListInactive li a:hover {
     filter: blur(0px);
     opacity: 1;
     margin: 0;
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

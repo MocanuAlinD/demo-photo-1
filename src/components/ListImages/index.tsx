@@ -33,7 +33,7 @@ const ListImages = ({ category }: { category: string }) => {
   };
 
   const actualList = nameList[category];
-  console.log("nameList[category]", actualList);
+  // console.log("nameList[category]", actualList);
 
   const [state, setState] = useState({
     url: actualList[0].url,
@@ -65,12 +65,11 @@ const ListImages = ({ category }: { category: string }) => {
       </div>
       <div className={styles.bigImage}>
         <div
-          className="insideBg"
           style={{
             width: "100%",
             height: "90vh",
             backgroundImage: `url(${state.url})`,
-            backgroundPosition: "center",
+            backgroundPosition: "top",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundOrigin: "content-box",
