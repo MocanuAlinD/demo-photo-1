@@ -1,48 +1,76 @@
-.desktopMenuContainer {
-  display: none;
+.categoryMenuDesktop {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  .desktopMenuList {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .liActive {
+      color: whitesmoke;
+    }
+    .liInactive {
+      color: #777;
+    }
+    .homeLink{
+      color: #219ebc;
+    }
+  }
 }
 
-@media screen and (width > 700px) {
-  .desktopMenuContainer {
+.desktopMenuContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  .desktopMenuList {
     display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    .desktopMenuList {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      & > li {
-        font-family: Poppins, sans-serif;
-        font-weight: 400;
-        transition: all 0.35s ease-in-out;
-        position: relative;
-      }
-      & > li:last-child {
-        margin-right: 2rem;
-      }
-
-      & li:hover {
-        color: whitesmoke;
-        letter-spacing: 2px;
-      }
-      & li::before {
-        content: "";
-        position: absolute;
-        bottom: -10%;
-        left: 0;
-        width: 0%;
-        height: 0.15rem;
-        background-color: #aaa;
-        transition: all 0.35s ease 0.2s;
-      }
-      & li:hover::before {
-        width: 100%;
-      }
-      &:has(li:hover) li:not(:hover) {
-        color: #ccc;
-        filter: blur(1px);
-      }
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    & > li {
+      font-family: Poppins, sans-serif;
+      font-weight: 400;
+      transition: all 0.35s ease-in-out;
+      position: relative;
     }
+    & > li:last-child {
+      margin-right: 2rem;
+    }
+
+    & li:hover {
+      color: whitesmoke;
+      letter-spacing: 2px;
+    }
+    & li::before {
+      content: "";
+      position: absolute;
+      bottom: -10%;
+      left: 0;
+      width: 0%;
+      height: 0.15rem;
+      background-color: #aaa;
+      transition: all 0.35s ease 0.2s;
+    }
+    & li:hover::before {
+      width: 100%;
+    }
+    &:has(li:hover) li:not(:hover) {
+      color: #ccc;
+      filter: blur(1px);
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .desktopMenuContainer {
+    display: none;
+  }
+  .categoryMenuDesktop {
+    display: none;
   }
 }

@@ -63,7 +63,7 @@ const BurgerMenu = ({
           </Link>
         </li>
         {path != "/" && (
-          <li>
+          <li className={styles.homeLink}>
             <Link onClick={closeBurgerMenu} href="/">
               home
             </Link>

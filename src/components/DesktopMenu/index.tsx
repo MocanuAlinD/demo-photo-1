@@ -1,56 +1,44 @@
-"use client"
+"use client";
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./DesktopMenu.module.css";
 
-
 const DesktopMenu = () => {
   const path = usePathname();
+  const pg = path.split("/")[2]
+  console.log('pg',pg)
+
+  const paths = [
+    "portraits",
+    "kids",
+    "preborn",
+    "newborn",
+    "food",
+    "city",
+    "landscape",
+  ];
 
   return (
-    <div className={styles.desktopMenuContainer}>
+    <div
+      className={
+        path == "/" ? styles.desktopMenuContainer : styles.categoryMenuDesktop
+      }
+    >
       <ul className={styles.desktopMenuList}>
-        <li>
-          <Link href="/categorie/portraits">
-            portraits
-          </Link>
-        </li>
-        <li>
-          <Link href="/categorie/kids">
-            kids
-          </Link>
-        </li>
-        <li>
-          <Link href="/categorie/preborn">
-            preborn
-          </Link>
-        </li>
-        <li>
-          <Link href="/categorie/newborn">
-            newborn
-          </Link>
-        </li>
-        <li>
-          <Link href="/categorie/food">
-            food
-          </Link>
-        </li>
-        <li>
-          <Link href="/categorie/city">
-            city
-          </Link>
-        </li>
-        <li>
-          <Link href="/categorie/landscape">
-            landscape
-          </Link>
-        </li>
+        {paths.map((addr) => {
+          return (
+            <li
+              key={addr}
+              className={pg == addr ? styles.liActive : styles.liInactive}
+            >
+              <Link href={"/categorie/" + addr}>{addr}</Link>
+            </li>
+          );
+        })}
         {path != "/" && (
           <li>
-            <Link href="/">
-              home
-            </Link>
+            <Link href="/" className={styles.homeLink}>home</Link>
           </li>
         )}
       </ul>

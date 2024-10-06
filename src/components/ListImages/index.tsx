@@ -12,23 +12,6 @@ import {
   landscape,
 } from "@/actions";
 
-// type tl = {
-// id: string;
-// url: string;
-// width: string;
-// height: string;
-// }[];
-
-// type AllLists = {
-//   portraits: tl;
-//   kids: tl;
-//   preborn: tl;
-//   newborn: tl;
-//   food: tl;
-//   city: tl;
-//   landscape: tl;
-// };
-
 type one = {
   [index: string]: {
     id: string;
@@ -71,8 +54,6 @@ const ListImages = ({ category }: { category: string }) => {
               className={styles.separateImage}
             >
               <Image
-                // priority
-                // as="image"
                 src={a.url}
                 width={+a.width}
                 height={+a.height}
